@@ -3,7 +3,6 @@ package gzip
 
 import (
 	"compress/gzip"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"strings"
@@ -67,7 +66,6 @@ func (grw gzipResponseWriter) Write(p []byte) (int, error) {
 		grw.c.Resp.Header().Set(HEADER_CONTENT_TYPE, http.DetectContentType(p))
 	}
 	i, e := grw.w.Write(p)
-	fmt.Println(i, e)
 	return i, e
 }
 
