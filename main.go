@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"gopkg.in/baa.v1"
+	"github.com/go-baa/baa"
 )
 
 // Options represents a struct for specifying configuration options for the GZip middleware.
